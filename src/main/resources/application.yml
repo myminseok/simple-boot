@@ -1,0 +1,21 @@
+
+
+spring:
+  application:
+    name: simple-boot-app
+cf.instance.index: ${CF_INSTANCE_INDEX:default}
+
+---
+
+spring:
+  profiles: cloud
+
+  application:
+    name: simple-boot-app
+
+path: ${PATH}
+cf.instance.index: ${CF_INSTANCE_INDEX}
+vcap.application.instance.id: ${vcap.application.instance_id}
+
+
+
